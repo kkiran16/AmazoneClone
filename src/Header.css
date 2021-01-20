@@ -1,0 +1,76 @@
+.header-belt{
+    width: 100%;
+    display: flex;
+    background-color: #131921;
+    position: static;
+    flex-flow: row nowrap;
+    height: 60px;
+    float: none;
+    font-size: 14px;
+    z-index: 5;
+}
+
+.header-left {
+    display: flex;
+    height: 60px;
+    position: static;
+    float: none;
+}
+
+.header__logo{
+    margin-left: 1px;
+    width: auto;
+    padding: 4px 0 0 0;
+    display: flex;
+    position: relative;
+    float: none;
+    flex-shrink: 0;
+    height: 100%;
+    /* background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405936311_.png);
+    background-size: 350px;
+    float: left;
+    text-indent: -500px;
+    background-position: -10px -51px;
+    width: 97px;
+    height: 30px; */
+}
+
+.logo-link {
+    display: flex;
+    position: static;
+    float: none;
+    flex-shrink: 0;
+    text-decoration: none;
+    padding: 1px 8px 0 6px;
+    margin: 1px;
+    height: 50px;
+    width: 100%;
+    clear: both;
+    cursor: pointer;
+}
+
+.nav-sprite{
+    margin-top: 12px;
+    pointer-events: none;
+    background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405936311_.png);
+    background-size: 350px;
+    float: left;
+    text-indent: -500px;
+    background-position: -10px -51px;
+    width: 97px;
+    height: 30px;
+    background-repeat: repeat-x;
+}
+
+.nav-logo-locale{
+    width: auto;
+    pointer-events: none;
+    display: block;
+    background-position: -270px -109px;
+    height: 14px;
+    margin: 16px 0 0 1px;
+    font-size: 13.5px;
+    color: #fff;
+    line-height: 14px;
+}
+
