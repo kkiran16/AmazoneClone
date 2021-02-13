@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // import Header from './Header'
 import './App.css'
+import Home from './Features/Home'
 import Header from './Header'
 
 function App(): React.ReactElement {
@@ -11,6 +12,7 @@ function App(): React.ReactElement {
       <div className="App">
         <Switch>
           <Route path="/checkout">
+            <Header />
             <p>Checkout</p>
           </Route>
           <Route path="/login">
@@ -18,6 +20,7 @@ function App(): React.ReactElement {
           </Route>
           <Route path="/">
             <Header />
+            <Home />
           </Route>
         </Switch>
       </div>
