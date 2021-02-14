@@ -8,6 +8,7 @@ module.exports = {
       'prettier',
       'prettier/react',
       'prettier/@typescript-eslint',
+      "plugin:react/recommended", // "plugin:react/recommended",
       'plugin:prettier/recommended'
     ],    
     env: { // An environment defines global variables that are predefined. 

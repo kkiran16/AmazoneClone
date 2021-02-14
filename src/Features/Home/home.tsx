@@ -1,9 +1,9 @@
 import React from 'react'
+import Product from '../Product'
 import {
   StyledHomeWrapper,
   StyledImage,
   StyledImageLink,
-  StyledImageLink1,
   StyledPageContent,
   StyledImageWrapper
 } from './home-styles'
@@ -20,6 +20,7 @@ const Home: React.FC = () => {
             />
           </StyledImageLink>
         </StyledImageWrapper>
+        <Product />
       </StyledHomeWrapper>
     </StyledPageContent>
   )
