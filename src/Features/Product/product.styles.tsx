@@ -38,12 +38,19 @@ export const StyledBody = styled.div`
   margin-bottom: 44px;
   height: 275px;
 `
-export const StyledProductListWrapper = styled.div``
+export const StyledProductListWrapper = styled.div`
+  & > div:nth-child(odd) {
+    margin-bottom: 8px !important;
+  }
+`
 
 export const StyledListSection1 = styled.div`
   overflow: hidden;
   height: 50%;
-  margin-bottom: 8px !important;
+
+  & > div:nth-child(odd) {
+    float: right;
+  }
 `
 
 export const StyledListSection2 = styled.div`

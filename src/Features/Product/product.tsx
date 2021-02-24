@@ -17,49 +17,72 @@ import {
 interface TItem {
   floatRight?: boolean
 }
-const ProductItem: React.FC<TItem> = ({ floatRight }: TItem) => {
+type TProductItem = {
+  link: string
+  displayName: string
+}
+type TProductList = {
+  itemsList: Array<TProductItem>
+}
+type TProduct = {
+  productCategoryName: string
+  itemsList: Array<TProductItem>
+}
+
+const ProductItem: React.FC<TProductItem> = ({
+  link,
+  displayName
+}: TProductItem) => {
   return (
-    <StyledProductItemWrapper style={{ float: floatRight ? 'right' : 'none' }}>
+    <StyledProductItemWrapper>
       <StyledItemLink>
         <StyledLinkSection1>
-          <StyledLinkImage
-            alt="ACs"
-            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/Desktop_QC_tile_graphic_186x116_1._SY116_CB414480869_.jpg"
-          />
+          <StyledLinkImage alt={displayName} src={link} />
         </StyledLinkSection1>
-        <StyledLinkSection2>ACs</StyledLinkSection2>
+        <StyledLinkSection2>{displayName}</StyledLinkSection2>
       </StyledItemLink>
     </StyledProductItemWrapper>
   )
 }
 
-ProductItem.defaultProps = {
-  floatRight: false
-}
-
-function ProductList(): React.ReactElement {
+function ProductList({ itemsList }: TProductList): React.ReactElement {
   return (
     <StyledProductListWrapper>
       <StyledListSection1>
-        <ProductItem />
-        <ProductItem floatRight />
+        <ProductItem
+          link={itemsList[0].link}
+          displayName={itemsList[0].displayName}
+        />
+        <ProductItem
+          link={itemsList[1].link}
+          displayName={itemsList[1].displayName}
+        />
       </StyledListSection1>
-      <StyledListSection2>
-        <ProductItem />
-        <ProductItem floatRight />
-      </StyledListSection2>
+      <StyledListSection1>
+        <ProductItem
+          link={itemsList[2].link}
+          displayName={itemsList[2].displayName}
+        />
+        <ProductItem
+          link={itemsList[3].link}
+          displayName={itemsList[3].displayName}
+        />
+      </StyledListSection1>
     </StyledProductListWrapper>
   )
 }
-const Product: React.FC = () => {
+const Product: React.FC<TProduct> = ({
+  productCategoryName,
+  itemsList
+}: TProduct) => {
   return (
     <StyledProductWrapper>
       <StyledContainer>
         <StyledHeader>
-          <h2>Top Picks for your Home</h2>
+          <h2>{productCategoryName}</h2>
         </StyledHeader>
         <StyledBody>
-          <ProductList />
+          <ProductList itemsList={itemsList} />
         </StyledBody>
       </StyledContainer>
     </StyledProductWrapper>

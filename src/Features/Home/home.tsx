@@ -1,4 +1,5 @@
 import React from 'react'
+import { list1 } from 'Data/products-list'
 import Product from '../Product'
 import {
   StyledHomeWrapper,
@@ -20,7 +21,10 @@ const Home: React.FC = () => {
             />
           </StyledImageLink>
         </StyledImageWrapper>
-        <Product />
+        <Product
+          productCategoryName={list1.productCategoryName}
+          itemsList={list1.itemsList}
+        />
       </StyledHomeWrapper>
     </StyledPageContent>
   )
