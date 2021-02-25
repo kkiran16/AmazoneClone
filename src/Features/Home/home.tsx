@@ -2,17 +2,19 @@ import React from 'react'
 import { list1 } from 'Data/products-list'
 import Product from '../Product'
 import {
-  StyledHomeWrapper,
   StyledImage,
   StyledImageLink,
   StyledPageContent,
-  StyledImageWrapper
+  StyledImageWrapper,
+  StyledBannerWrapper,
+  StyledGridLayout,
+  StyledGridCardLayout
 } from './home-styles'
 
 const Home: React.FC = () => {
   return (
     <StyledPageContent>
-      <StyledHomeWrapper>
+      <StyledBannerWrapper>
         <StyledImageWrapper>
           <StyledImageLink href="https://www.amazon.in/dp/B08K92WLCV?pf_rd_r=EYK3GMPS070NM1SBRHK1&pf_rd_p=3e690865-aa61-4538-b18e-fecc689d1374">
             <StyledImage
@@ -21,11 +23,39 @@ const Home: React.FC = () => {
             />
           </StyledImageLink>
         </StyledImageWrapper>
-        <Product
-          productCategoryName={list1.productCategoryName}
-          itemsList={list1.itemsList}
-        />
-      </StyledHomeWrapper>
+      </StyledBannerWrapper>
+      <StyledGridLayout>
+        <StyledGridCardLayout>
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+          <Product
+            productCategoryName={list1.productCategoryName}
+            itemsList={list1.itemsList}
+          />
+        </StyledGridCardLayout>
+      </StyledGridLayout>
     </StyledPageContent>
   )
 }

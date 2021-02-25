@@ -14,9 +14,6 @@ import {
   StyledProductWrapper
 } from './product.styles'
 
-interface TItem {
-  floatRight?: boolean
-}
 type TProductItem = {
   link: string
   displayName: string
@@ -29,6 +26,8 @@ type TProduct = {
   itemsList: Array<TProductItem>
 }
 
+// Ideally, passing generic props to React.FC is enough for the typescript to infer types on the function,
+// But due to a bug with eslint-plugin-typescript(7.21.5) parser, it is necessary to provide types information on both React.FC & on props.
 const ProductItem: React.FC<TProductItem> = ({
   link,
   displayName
@@ -45,7 +44,9 @@ const ProductItem: React.FC<TProductItem> = ({
   )
 }
 
+// Alternate to arrow functions, we can write normal as below with typing.
 function ProductList({ itemsList }: TProductList): React.ReactElement {
+  // The below logic has to be refactored using some loops.
   return (
     <StyledProductListWrapper>
       <StyledListSection1>

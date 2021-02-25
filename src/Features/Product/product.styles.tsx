@@ -14,6 +14,13 @@ export const StyledProductWrapper = styled.div`
   font-size: 13px !important;
   line-height: 19px !important;
   font-family: 'Amazon Ember', Arial, sans-serif;
+
+  @media screen and (device-width: 360px) and (device-height: 640px) {
+    height: 220px;
+    min-height: 220px;
+    max-width: 200px;
+    flex: 1 0 190px;
+  }
 `
 /* position: relative; NTCB */
 export const StyledContainer = styled.div`
